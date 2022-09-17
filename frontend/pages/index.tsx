@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import { Container, Row, Text, Spacer, Divider, Col, Grid } from '@nextui-org/react';
+import { Container, Row, Text, Spacer, Divider, Col, Grid, Button } from '@nextui-org/react';
+
 
 import type { NextPage } from 'next';
+import { useAddress } from '@thirdweb-dev/react';
 
 const Home: NextPage = () => {
+
+  const address = useAddress();
 
   return (
     <Layout>
@@ -17,19 +21,38 @@ const Home: NextPage = () => {
 
         <main>
           <Container fluid md gap={3}>
-
-            <Spacer />
-
             <Row justify="center">
-
-              <Text h1>
-                Main Page
-              </Text>
+              <Text h1>Lens Testing Page</Text>
+              <Spacer />
             </Row>
-
             <Spacer />
             <Divider />
-
+            <Spacer />
+            <Row>
+              <Col>
+                <Row>
+                  <Text h3>This is a headline</Text>
+                </Row>
+                <Row>
+                  <Text>Here is some Text</Text>
+                  <Spacer />
+                  <Text>Here is the address: {address}</Text>
+                </Row>
+                <Row>
+                  <Button>Button!</Button>
+                </Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Row>
+                  <Text h3>Another Headline</Text>
+                </Row>
+                <Row>
+                  <Text>More text lalala</Text>
+                </Row>
+              </Col>
+            </Row>
           </Container>
         </main>
       </div>

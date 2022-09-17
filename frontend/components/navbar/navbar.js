@@ -37,10 +37,13 @@ export default function Navbar() {
         <Grid.Container gap={2} justify="center" alignItems="center">
             <Spacer />
             <Grid>
-                <Button onPress={() => router.push("/")}>Home</Button>
+                <Button onPress={() => router.push("/")}>Main</Button>
             </Grid>
             <Grid>
-                <Button onPress={() => router.push("/about")}>About</Button>
+                <Button onPress={() => router.push("/lens")}>Lens</Button>
+            </Grid>
+            <Grid>
+                <Button onPress={() => router.push("/qr")}>QR Stuff</Button>
             </Grid>
             <Grid>
                 {address ? (
