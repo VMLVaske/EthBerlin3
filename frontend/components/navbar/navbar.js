@@ -2,9 +2,6 @@ import {
     Button,
     Grid,
     Spacer,
-    Text,
-    Container,
-    Row,
 } from "@nextui-org/react";
 
 import { useState } from "react";
@@ -15,10 +12,10 @@ import {
     useMetamask,
     useNetworkMismatch,
     useNetwork,
+    ConnectWallet
 } from "@thirdweb-dev/react";
 
 import useAuthenticate from "../../hooks/useAuthenticate";
-import truncateEthAddress from "truncate-eth-address";
 
 export default function Navbar() {
     const router = useRouter();
@@ -46,22 +43,7 @@ export default function Navbar() {
                 <Button onPress={() => router.push("/qr")}>QR Stuff</Button>
             </Grid>
             <Grid>
-                {address ? (
-                    <Container>
-                        <Row>
-                            <Button flat auto onPress={disconnect}>
-                                Disconnect Wallet
-                            </Button>
-                        </Row>
-                        <Row>
-                            <Text>Address: {truncateEthAddress(address)}</Text>
-                        </Row>
-                    </Container>
-                ) : (
-                    <Button flat auto onPress={connectWithMetamask}>
-                        Connect Wallet
-                    </Button>
-                )}
+                <ConnectWallet />
             </Grid>
 
         </Grid.Container>
