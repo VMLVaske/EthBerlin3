@@ -3,6 +3,15 @@ import { Container, Spacer, Divider, Text, Row, Col, Button } from '@nextui-org/
 
 import { useAddress } from '@thirdweb-dev/react';
 import { useState } from "react";
+//Lens integration
+import { gql } from '@apollo/client/core';
+import { BigNumber, utils } from 'ethers';
+import { apolloClient } from '../apollo-client';
+import { login } from '../authentication/login';
+import { getAddressFromSigner } from '../ethers.service';
+import { prettyJSON } from '../helpers';
+import { pollUntilIndexed } from '../indexer/has-transaction-been-indexed';
+
 
 export default function Collection() {
 
