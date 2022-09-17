@@ -43,7 +43,9 @@ export default function Navbar() {
                 <Button onPress={() => router.push("/qr")}>QR Stuff</Button>
             </Grid>
             <Grid>
-                <ConnectWallet />
+                <ConnectWallet
+                    colorMode="light"
+                    accentColor="#F213A4" />
             </Grid>
 
         </Grid.Container>

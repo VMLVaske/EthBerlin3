@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import { Container, Row, Text, Spacer, Divider, Col, Grid, Button } from '@nextui-org/react';
-import Web3 from 'web3';
 
 
 import type { NextPage } from 'next';
@@ -11,9 +10,14 @@ const Home: NextPage = () => {
 
   const address = useAddress();
 
+  const promisify = require('es6-promisify')
+  const TruffleContract = require('@truffle/contract')
+  const Web3 = require('web3')
+  const { Deployer } = require('@wearekickback/contracts')
+
   const deploy = async () => {
 
-    const web3 = new Web3(/* Ropsten or Mainnet HTTP RPC endpoint */)
+    const web3 = new Web3(Web3.givenProvider)
 
     const contract = TruffleContract(Deployer)
     contract.setProvider(web3.currentProvider)
@@ -21,7 +25,7 @@ const Home: NextPage = () => {
     const deployer = await contract.deployed()
 
     // deploy a new party (see Deployer.sol for parameter documentation)
-    await deployer.deploy('My event', 0, 0, 0, oneweek, owneraddress, tokenaddress)
+    await deployer.deploy('My event', 0, 10, 1, address)
 
     const events = await promisify(deployer.contract.getPastEvents, deployer.contract)('NewParty')
 
@@ -50,29 +54,10 @@ const Home: NextPage = () => {
             <Divider />
             <Spacer />
             <Row>
-              <Col>
-                <Row justify="center">
-                  <Text h3>This is a headline</Text>
-                </Row>
-                <Row justify="center">
-                  <Text>Here is some Text</Text>
-                  <Spacer />
-                  <Text>Here is the address: {address}</Text>
-                </Row>
-                <Row justify="center">
-                  <Button onPress={deploy}>Button!</Button>
-                </Row>
-              </Col>
+              <Text h3>Create Event</Text>
             </Row>
             <Row>
-              <Col>
-                <Row justify="center">
-                  <Text h3>Another Headline</Text>
-                </Row>
-                <Row justify="center">
-                  <Text>More text lalala</Text>
-                </Row>
-              </Col>
+              <Button onPress={deploy}>Create a new Event</Button>
             </Row>
           </Container>
         </main>
