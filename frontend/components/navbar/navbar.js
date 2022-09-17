@@ -40,7 +40,10 @@ export default function Navbar() {
                 <Button onPress={() => router.push("/lens")}>Lens</Button>
             </Grid>
             <Grid>
-                <Button onPress={() => router.push("/qr")}>QR Stuff</Button>
+                <Button onPress={() => router.push("/events")}>Events</Button>
+            </Grid>
+            <Grid>
+                <Button onPress={() => router.push("/user")}>Profile</Button>
             </Grid>
             <Grid>
                 <ConnectWallet
