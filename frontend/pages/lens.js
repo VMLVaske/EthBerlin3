@@ -13,6 +13,7 @@ export default function Collection() {
             <div>
                 <main>
                     <Container fluid >
+                        <Spacer />
                         <Row justify="center">
                             <Text h1>Lens Testing Page</Text>
                             <Spacer />
@@ -22,25 +23,25 @@ export default function Collection() {
                         <Spacer />
                         <Row>
                             <Col>
-                                <Row>
+                                <Row justify="center">
                                     <Text h3>This is a headline</Text>
                                 </Row>
-                                <Row>
+                                <Row justify="center">
                                     <Text>Here is some Text</Text>
                                     <Spacer />
                                     <Text>Here is the address: {address}</Text>
                                 </Row>
-                                <Row>
+                                <Row justify="center">
                                     <Button>Button!</Button>
                                 </Row>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <Row>
+                                <Row justify="center">
                                     <Text h3>Another Headline</Text>
                                 </Row>
-                                <Row>
+                                <Row justify="center">
                                     <Text>More text lalala</Text>
                                 </Row>
                             </Col>

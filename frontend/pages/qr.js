@@ -15,10 +15,14 @@ export default function Collection() {
             <div>
                 <main>
                     <Container fluid md gap={3}>
+                        <Spacer />
                         <Row justify="center">
                             <Text h1>QR Testing Area</Text>
                             <Spacer />
                         </Row>
+                        <Spacer />
+                        <Divider />
+                        <Spacer />
                         <Row justify="center">
                             <Text>
                                 Here is some QR Stuff happening:
@@ -28,7 +32,7 @@ export default function Collection() {
                             {address ?
 
                                 <QRCode value={address} />
-                            :<Text b>No Data</Text>}
+                                : <Text b>No Data</Text>}
                         </Row>
                     </Container>
                 </main>
