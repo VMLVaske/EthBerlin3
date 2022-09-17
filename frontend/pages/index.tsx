@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import { Container, Row, Text, Spacer, Divider, Col, Grid, Button } from '@nextui-org/react';
+import Web3 from 'web3';
 
 
 import type { NextPage } from 'next';
@@ -9,6 +10,25 @@ import { useAddress } from '@thirdweb-dev/react';
 const Home: NextPage = () => {
 
   const address = useAddress();
+
+  const deploy = async () => {
+
+    const web3 = new Web3(/* Ropsten or Mainnet HTTP RPC endpoint */)
+
+    const contract = TruffleContract(Deployer)
+    contract.setProvider(web3.currentProvider)
+
+    const deployer = await contract.deployed()
+
+    // deploy a new party (see Deployer.sol for parameter documentation)
+    await deployer.deploy('My event', 0, 0, 0, oneweek, owneraddress, tokenaddress)
+
+    const events = await promisify(deployer.contract.getPastEvents, deployer.contract)('NewParty')
+
+    const { returnValues: { deployedAddress } } = events.pop()
+
+    console.log(`New party contract deployed at: ${deployedAddress}`)
+  }
 
   return (
     <Layout>
@@ -23,7 +43,7 @@ const Home: NextPage = () => {
           <Container fluid md gap={3}>
             <Spacer />
             <Row justify="center">
-              <Text h1>Lens Testing Page</Text>
+              <Text h1>Main Page</Text>
               <Spacer />
             </Row>
             <Spacer />
@@ -40,7 +60,7 @@ const Home: NextPage = () => {
                   <Text>Here is the address: {address}</Text>
                 </Row>
                 <Row justify="center">
-                  <Button>Button!</Button>
+                  <Button onPress={deploy}>Button!</Button>
                 </Row>
               </Col>
             </Row>

@@ -3154,6 +3154,11 @@
   dependencies:
     "@walletconnect/window-getters" "^1.0.0"
 
+"@wearekickback/contracts@^1.5.0":
+  "integrity" "sha512-nrTt7WJ9Z9qKMT6j0+nxHJwDR+FmA+L8NE/ZXyMqd7VFiRBWXlGTzlZyClnIjzwRVPwJ9pftRROxDDSkY2Vb0Q=="
+  "resolved" "https://registry.npmjs.org/@wearekickback/contracts/-/contracts-1.5.0.tgz"
+  "version" "1.5.0"
+
 "@zag-js/core@0.1.10":
   "integrity" "sha512-lsJet2ZmTsBlDaMfCJoP0vrhDnn/vqC5NFTuTZ3f+AWwZn/VECXf9yoETGQpB0H74Y2yI2N8etL3NIH0r7kvCA=="
   "resolved" "https://registry.npmjs.org/@zag-js/core/-/core-0.1.10.tgz"
