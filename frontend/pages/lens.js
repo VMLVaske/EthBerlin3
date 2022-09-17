@@ -3,19 +3,19 @@ import { Container, Spacer, Divider, Text, Row, Col, Button } from '@nextui-org/
 
 import { useAddress } from '@thirdweb-dev/react';
 import { useState } from "react";
+
 //Lens integration
-import { gql } from '@apollo/client/core';
-import { BigNumber, utils } from 'ethers';
-import { apolloClient } from '../apollo-client';
-import { login } from '../authentication/login';
-import { getAddressFromSigner } from '../ethers.service';
-import { prettyJSON } from '../helpers';
-import { pollUntilIndexed } from '../indexer/has-transaction-been-indexed';
+import { apolloClient } from './apollo-client';
+import { gql } from '@apollo/client'
 
 
 export default function Collection() {
 
     const address = useAddress();
+
+    const onClickHandler = () => {
+        console.log("Hallo")
+    }
 
     return (
         <Layout>
@@ -41,7 +41,8 @@ export default function Collection() {
                                     <Text>Here is the address: {address}</Text>
                                 </Row>
                                 <Row justify="center">
-                                    <Button>Button!</Button>
+                                    <Button onClick={onClickHandler}>Button!</Button>
+
                                 </Row>
                             </Col>
                         </Row>

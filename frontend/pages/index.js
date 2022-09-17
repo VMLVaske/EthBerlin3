@@ -4,10 +4,10 @@ import { Container, Row, Text, Spacer, Divider, Col, Grid, Button } from '@nextu
 import Web3 from 'web3';
 
 
-import type { NextPage } from 'next';
+import { NextPage } from 'next';
 import { useAddress } from '@thirdweb-dev/react';
 
-const Home: NextPage = () => {
+const Home = () => {
 
   const address = useAddress();
 
@@ -60,7 +60,6 @@ const Home: NextPage = () => {
                   <Text>Here is the address: {address}</Text>
                 </Row>
                 <Row justify="center">
-                  <Button onPress={deploy}>Button!</Button>
                 </Row>
               </Col>
             </Row>
