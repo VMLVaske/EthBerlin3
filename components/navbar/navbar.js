@@ -36,16 +36,16 @@ export default function Navbar() {
         <Grid.Container gap={2} justify="center" alignItems="center">
             <Spacer />
             <Grid>
-                <Button auto onPress={() => router.push("/")}>Main</Button>
+                <Button color="warning" shadow auto onPress={() => router.push("/")}>Main</Button>
             </Grid>
             <Grid>
-                <Button auto onPress={() => router.push("/events")}>Events</Button>
+                <Button color="warning" shadow auto onPress={() => router.push("/events")}>Events</Button>
             </Grid>
             <Grid>
-                <Button auto onPress={() => router.push("/leaderboard")}>Leaderboard</Button>
+                <Button color="warning" shadow auto onPress={() => router.push("/leaderboard")}>Leaderboard</Button>
             </Grid>
             <Grid>
-                <Button auto onPress={() => router.push("/user")}>Profile</Button>
+                <Button color="warning" shadow auto onPress={() => router.push("/user")}>Profile</Button>
             </Grid>
             <ThemeChanger />
             <Grid>

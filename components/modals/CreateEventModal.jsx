@@ -32,7 +32,7 @@ export default function RegisterModal(props) {
 
     return (
         <div>
-            <Button auto onPress={handler}>
+            <Button auto color="warning" onPress={handler}>
                 Create Event
             </Button>
             <Modal
@@ -97,7 +97,7 @@ export default function RegisterModal(props) {
                     <Button auto flat color="error" onPress={closeHandler}>
                         Cancel
                     </Button>
-                    <Button auto onPress={createEvent}>
+                    <Button auto color="success" onPress={createEvent}>
                         Create
                     </Button>
                 </Modal.Footer>

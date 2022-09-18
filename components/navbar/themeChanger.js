@@ -36,6 +36,8 @@ export const ThemeChanger = () => {
                 <Button
                     auto
                     bordered
+                    color="warning"
+                    shadow
                     icon={<MoonIcon />}
                     onPress={toggle}
                 />
@@ -43,6 +45,8 @@ export const ThemeChanger = () => {
                 <Button
                     auto
                     bordered
+                    shadow
+                    color="warning"
                     icon={<SunIcon />}
                     onPress={toggle}
                 />
