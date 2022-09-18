@@ -19,3 +19,14 @@ The use case for this lies in exclusive events, i.e. raave
 If you have the option to sort a waiting list and thereby give space to the most reputable (a.k.a. the most avid event goers!), the waitlist system may become a bit fairer. 
 
 ### What about hacking the system? 
+Hacking the system actually is a good thing. 
+
+In the initial solution, we wanted to integrate kickbacks "stake with real money" system and then, once people earned reputation tokens through showing up for the events, go from money-staking to reputation staking. 
+
+In this version, it would've been possible to "hack the system" by creating a bunch of burner wallets and still register for all the events. 
+
+However, that would actually be a good thing, coz the money goes to event organizers and attendees - so it would flow back into the ecosystem. 
+And: using burner wallets is disincentivized coz reputation would be needed to go to more exclusive events (think raaev or degendinner). 
+
+### What about newbies without rep? 
+See previous point :) In a solution where initial entry is possible through staking money, reputation tokens will be earned by showing up to the events. Thus, newbies are welcomed 
