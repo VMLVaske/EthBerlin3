@@ -55,18 +55,7 @@ const Leaderboard = () => {
     ];
 
     const collator = useCollator({ numeric: true });
-    async function load({ signal }) {
-        {
-            /*
-            *const res = await fetch("https://swapi.py4e.com/api/people/?search", {
-            signal,
-        });
-        const json = await res.json();
-        return {
-            items: json.results,
-        };
-            */
-        }
+    async function load() {
         return {
             items: rows
         }

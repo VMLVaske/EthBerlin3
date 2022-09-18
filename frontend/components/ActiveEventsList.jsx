@@ -51,7 +51,7 @@ const ActiveEventList = () => {
                                 <Grid.Container gap={2} justify="center">
                                     {console.log("Listings2: ", listings)}
                                     {listings.map((index) => (
-                                        <Grid xs={6} sm={3}>
+                                        <Grid xs={6} sm={3} key={index.asset.id}>
                                             <Card isPressable isHoverable>
                                                 <Card.Header>
                                                     <Text b>{index.asset.name}</Text>
@@ -76,10 +76,6 @@ const ActiveEventList = () => {
                                                     </Row>
 
                                                 </Card.Body>
-
-                                                <Card.Footer>
-                                                    <NftCardButtons NftId={index.asset.id.toNumber()} />
-                                                </Card.Footer>
                                             </Card>
                                         </Grid>
                                     ))}

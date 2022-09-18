@@ -101,7 +101,7 @@ const Events = () => {
                         ) : (
                             <Grid.Container gap={2} justify="center">
                                 {nfts.map((listing) => (
-                                    <Grid xs={6} sm={3}>
+                                    <Grid xs={6} sm={3} key={listing.metadata.id}>
                                         <Card isPressable isHoverable>
                                             <Card.Header>
                                                 <Link href={`/event/${listing.metadata.id}`}>

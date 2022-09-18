@@ -31,9 +31,6 @@ const Home: NextPage = () => {
             <Row>
               <Text h3>Create Event</Text>
             </Row>
-            <Row>
-              <Button onPress={deploy}>Create a new Event</Button>
-            </Row>
           </Container>
         </main>
       </div>
