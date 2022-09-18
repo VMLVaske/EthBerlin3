@@ -4,7 +4,7 @@ import { Container, Row, Grid, Spacer, Loading, Text, Image } from '@nextui-org/
 
 import { useAddress } from '@thirdweb-dev/react';
 
-import logo from '../../icons/cat-dj.gif';
+import logoImg from '../../icons/cat-dj.gif';
 
 const Event = () => {
 
@@ -35,10 +35,11 @@ const Event = () => {
                         ) : (
                             <Container fluid >
                                 <Row justify="center">
-                                    <Text h6>Dev was tired</Text>
+                                    <Text h3>Dev was tired</Text>
                                 </Row>
-                                <Row>
-                                    <img src={logo} alt="cat-dj.gif..." />
+                                <Spacer />
+                                <Row justify="center">
+                                    <img src="https://c.tenor.com/c60s28e0YHUAAAAC/cat-dj.gif" alt="cat-dj.gif..." />
                                 </Row>
                             </Container>
                         )
