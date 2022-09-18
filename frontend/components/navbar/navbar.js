@@ -15,6 +15,8 @@ import {
     ConnectWallet
 } from "@thirdweb-dev/react";
 
+import { ThemeChanger } from "../navbar/themeChanger";
+
 import useAuthenticate from "../../hooks/useAuthenticate";
 
 export default function Navbar() {
@@ -34,17 +36,18 @@ export default function Navbar() {
         <Grid.Container gap={2} justify="center" alignItems="center">
             <Spacer />
             <Grid>
-                <Button onPress={() => router.push("/")}>Main</Button>
+                <Button auto onPress={() => router.push("/")}>Main</Button>
             </Grid>
             <Grid>
-                <Button onPress={() => router.push("/lens")}>Lens</Button>
+                <Button auto onPress={() => router.push("/events")}>Events</Button>
             </Grid>
             <Grid>
-                <Button onPress={() => router.push("/events")}>Events</Button>
+                <Button auto onPress={() => router.push("/leaderboard")}>Leaderboard</Button>
             </Grid>
             <Grid>
-                <Button onPress={() => router.push("/user")}>Profile</Button>
+                <Button auto onPress={() => router.push("/user")}>Profile</Button>
             </Grid>
+            <ThemeChanger />
             <Grid>
                 <ConnectWallet
                     colorMode="light"

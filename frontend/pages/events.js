@@ -120,7 +120,7 @@ const Events = () => {
                                                 </Row>
                                             </Card.Body>
                                             <Card.Footer>
-                                                <Text>Footer Text</Text>
+                                                <Spacer />
                                             </Card.Footer>
                                         </Card>
                                     </Grid>
