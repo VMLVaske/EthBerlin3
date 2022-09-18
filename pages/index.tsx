@@ -28,8 +28,8 @@ const Home: NextPage = () => {
             <Spacer />
             <Divider />
             <Spacer />
-            <Row>
-              <Text h3>Create Event</Text>
+            <Row justify="center">
+              <Text h>This is REP. </Text>
             </Row>
           </Container>
         </main>
