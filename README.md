@@ -30,3 +30,10 @@ And: using burner wallets is disincentivized coz reputation would be needed to g
 
 ### What about newbies without rep? 
 See previous point :) In a solution where initial entry is possible through staking money, reputation tokens will be earned by showing up to the events. Thus, newbies are welcomed 
+
+## Tech
+
+Frontend: NextJs App deployed on Vercel, using some react and some typescript
+Connection Frontend <> Backend: Thirdweb
+Backend: Solidity, Sismo
+
